@@ -1,8 +1,27 @@
 // Lógica e interações do teste vocacional.
 let current=0,selected=null,scores=[];
 const $=id=>document.getElementById(id);
-function renderCourses(){ $('courseGrid').innerHTML=courses.map((c,i)=>`<article class="course" onclick="openCourse(${i})"><small>CAMINHO ${String(i+1).padStart(2,'0')}</small><h3>${c.name}</h3><p>${c.desc}</p><span class="course-link">Conhecer o curso →</span></article>`).join(''); }
-function openCourse(i){const c=courses[i];$('modalTitle').textContent=c.name;$('modalDesc').textContent=c.desc;$('modalPpc').href=c.ppc;$('courseModal').classList.add('open');document.body.style.overflow='hidden'}
+function renderCourses() {
+    const sortedCourses = [...courses].sort((a, b) =>
+        a.name.localeCompare(b.name, 'pt-BR', {
+            sensitivity: 'base'
+        })
+    );
+
+    $('courseGrid').innerHTML = sortedCourses.map((course, index) => `
+        <article class="course" onclick="openCourse(${courses.indexOf(course)})">
+            <small>CAMINHO ${String(index + 1).padStart(2, '0')}</small>
+
+            <h3>${course.name}</h3>
+
+            <p>${course.desc}</p>
+
+            <span class="course-link">
+                Conhecer o curso →
+            </span>
+        </article>
+    `).join('');
+}function openCourse(i){const c=courses[i];$('modalTitle').textContent=c.name;$('modalDesc').textContent=c.desc;$('modalPpc').href=c.ppc;$('courseModal').classList.add('open');document.body.style.overflow='hidden'}
 function closeModal(){$('courseModal').classList.remove('open');document.body.style.overflow=''}
 function show(section){$('home').style.display=section==='home'?'block':'none';$('quiz').style.display=section==='quiz'?'block':'none';$('result').style.display=section==='result'?'block':'none'}
 function goHome(){closeModal();show('home');history.replaceState(null,'','#');window.scrollTo(0,0)}
