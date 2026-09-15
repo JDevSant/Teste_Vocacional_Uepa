@@ -970,16 +970,42 @@ header{
         grid-template-columns:repeat(2,minmax(0,1fr))
     }
 
+    /* HEADER TABLET/MOBILE */
     .navlinks{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        font-size:11px;
+        margin-left:auto
+    }
+
+    .navlinks a{
         display:none
     }
 
     .brand{
-        min-width:0
+        min-width:0;
+        flex:1;
+        gap:8px;
+        overflow:hidden
     }
 
     .brand-copy{
-        display:none
+        display:block;
+        min-width:0;
+        padding-left:8px;
+        white-space:nowrap;
+        overflow:hidden
+    }
+
+    .brand-copy strong{
+        font-size:11px;
+        overflow:hidden;
+        text-overflow:ellipsis
+    }
+
+    .brand-copy span{
+        font-size:8px
     }
 
     .answers{
@@ -1019,57 +1045,72 @@ header{
 @media(max-width:520px){
 
     .container{
-        width:calc(100% - 20px);
+        width:calc(100% - 24px);
         max-width:none
     }
 
     header{
-        height:76px
+        height:68px;
+        width:100%;
+        overflow:visible
     }
 
     .nav{
-        width:calc(100% - 20px);
-        gap:8px
+        width:calc(100% - 24px);
+        gap:6px;
+        overflow:visible
     }
 
     .brand{
-        gap:7px;
+        gap:5px;
         min-width:0;
-        flex:1
+        flex:1;
+        overflow:hidden
     }
 
     .brand-logo{
         width:54px;
-        height:54px
+        height:54px;
+        flex:none
     }
 
     .brand img{
-        width:54px;
-        height:50px
+        width:50px;
+        height:48px
     }
 
     .brand-copy{
         display:block;
-        padding-left:7px;
-        min-width:0
+        padding-left:6px;
+        max-width:none;
+        min-width:0;
+        overflow:hidden;
+        border-left:1px solid var(--line)
     }
 
     .brand-copy strong{
-        font-size:10px;
-        line-height:1.15
+        display:block;
+        font-size:9px;
+        line-height:1.15;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis
     }
 
     .brand-copy span{
         display:block;
-        font-size:8px;
+        font-size:7px;
         line-height:1.2;
-        margin-top:2px
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis
     }
 
     .navlinks{
         display:flex;
-        gap:0;
-        flex:none
+        flex:none;
+        margin-left:0;
+        gap:0
     }
 
     .navlinks a{
@@ -1077,10 +1118,12 @@ header{
     }
 
     .nav-start{
+        display:block;
         padding:8px 9px;
-        font-size:10px;
-        border-radius:8px;
-        white-space:nowrap
+        font-size:9px;
+        line-height:1;
+        white-space:nowrap;
+        flex:none
     }
 
     .home-section{
