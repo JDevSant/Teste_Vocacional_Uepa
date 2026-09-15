@@ -369,21 +369,4 @@ document.addEventListener('keydown', e => {
 
 document.addEventListener('DOMContentLoaded', () => {
     renderCourses();
-
-    // Botoes de inicio com listener direto para maior compatibilidade mobile.
-    ['startNav', 'startHero', 'startCourses', 'restartQuiz'].forEach(id => {
-        const button = $(id);
-
-        if (button) {
-            button.addEventListener('click', startQuiz);
-        }
-    });
 });
-
-// Mantem as funcoes acessiveis aos botoes e a navegacao do HTML.
-window.startQuiz = startQuiz;
-window.nextQuestion = nextQuestion;
-window.prevQuestion = prevQuestion;
-window.goHome = goHome;
-window.openCourse = openCourse;
-window.closeModal = closeModal;
