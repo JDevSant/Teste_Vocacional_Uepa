@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teste Vocacional | UEPA</title>
+<meta name="description" content="Teste de Afinidade Acadêmica para os cursos do Campus XX da UEPA em Castanhal.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+ <div class="container nav">
+  <a class="brand" href="#" onclick="goHome();return false;" aria-label="UEPA - Universidade do Estado do Pará">
+   <span class="brand-logo"><img src="assets/uepa-header-logo.png" alt="Identidade visual da UEPA"></span>
+   <span class="brand-copy"><strong>Teste de Afinidade Acadêmica</strong><span>Campus XX · Castanhal</span></span>
+  </a>
+  <nav class="navlinks" aria-label="Navegação principal">
+   <a href="#como-funciona">Como funciona</a><a href="#cursos">Cursos</a><a href="#sobre-teste">Sobre o teste</a>
+   <button class="nav-start" onclick="startQuiz()">Começar teste</button>
+  </nav>
+ </div>
+</header>
+
+<main id="home" class="page">
+ <section class="home-section container">
+  <div class="home-intro">
+   <div>
+    <div class="eyebrow">Teste de afinidade · UEPA Campus XX</div>
+    <h1>Qual curso <span>combina</span> com a forma como você pensa?</h1>
+    <p class="lead">Não é uma prova e não existe resposta certa. Você vai escolher como agiria em situações reais de estudo, tecnologia, ciência, processos, território e sociedade. No final, seu conjunto de escolhas vira um perfil de afinidade.</p>
+    <div class="home-actions"><button class="btn-primary" onclick="startQuiz()">COMEÇAR O TESTE →</button><a class="btn-secondary" href="#como-funciona">Entender primeiro</a></div>
+   </div>
+   <div class="intro-side">
+    <div class="logo-art" aria-label="Logo da Universidade do Estado do Pará">
+     <span class="logo-art-shadow"></span>
+     <img src="assets/uepa-home-logo.png" alt="Universidade do Estado do Pará">
+     <span class="logo-art-mark">UEPA</span>
+    </div>
+    <div class="intro-note"><strong>Responda pelo seu jeito.</strong><br>Não tente adivinhar o curso. A proposta é descobrir quais formas de resolver problemas aparecem com mais força nas suas escolhas.</div>
+    <div class="facts"><div class="fact"><strong>15</strong><span>perguntas</span></div><div class="fact"><strong>7</strong><span>trajetórias</span></div><div class="fact"><strong>~5</strong><span>minutos</span></div></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="como-funciona" class="section container">
+  <div class="section-title"><div><div class="kicker">Antes de começar</div><h2>Você não precisa saber qual curso quer.</h2></div><p>O teste foi pensado para estudantes que ainda estão comparando possibilidades. As perguntas mostram caminhos diferentes de pensar, investigar e construir soluções.</p></div>
+  <div class="steps"><article class="step"><b>01 · ESCOLHA</b><h3>Leia a situação</h3><p>Cada pergunta apresenta um cenário curto. Escolha a alternativa que mais se aproxima do que você realmente faria.</p></article><article class="step"><b>02 · PERFIL</b><h3>Suas escolhas se conectam</h3><p>As respostas não apontam diretamente para um curso. Elas formam padrões de interesse, raciocínio e atuação.</p></article><article class="step"><b>03 · RESULTADO</b><h3>Conheça seus caminhos</h3><p>Você recebe uma trajetória principal e outras afinidades para comparar antes de conhecer melhor os cursos.</p></article></div>
+ </section>
+
+ <section id="sobre-teste" class="section container">
+  <div class="section-title"><div><div class="kicker">O que estamos medindo</div><h2>Mais do que “do que você gosta”.</h2></div><p>As escolhas observam como você reage a problemas, dados, experimentos, pessoas, processos e contextos reais.</p></div>
+  <div class="profile-strip"><div class="profile-main"><h3>Um perfil construído pelas suas decisões.</h3><p>Você pode gostar de tecnologia e ainda não ter perfil para programação. Pode gostar de natureza sem querer trabalhar em campo. Pode gostar de matemática sem querer viver em um laboratório. Por isso, o teste cruza diferentes dimensões em vez de depender de uma única pergunta.</p><div class="traits"><span class="trait">resolver problemas</span><span class="trait">investigar</span><span class="trait">organizar</span><span class="trait">modelar</span><span class="trait">comunicar</span><span class="trait">experimentar</span><span class="trait">analisar contextos</span></div></div><div class="profile-side"><div class="mini"><strong>Decisão</strong><span>Como você escolhe um caminho quando existem várias possibilidades.</span></div><div class="mini"><strong>Método</strong><span>Como você organiza informação antes de agir.</span></div><div class="mini"><strong>Problema</strong><span>Que tipo de desafio naturalmente chama sua atenção.</span></div><div class="mini"><strong>Aplicação</strong><span>Como você imagina transformar uma ideia em algo útil.</span></div></div></div>
+ </section>
+
+ <section id="cursos" class="section container">
+  <div class="section-title"><div><div class="kicker">7 possibilidades</div><h2>Conheça os caminhos antes de escolher.</h2></div><p>Você pode abrir qualquer curso agora ou deixar para explorar as opções depois do resultado.</p></div>
+  <div id="courseGrid" class="course-grid"></div>
+  <div class="callout"><div><strong>Quer descobrir primeiro?</strong><p>Responda as 15 perguntas e deixe o resultado organizar suas próximas opções.</p></div><button class="btn-primary" onclick="startQuiz()">COMEÇAR AGORA →</button></div>
+ </section>
+
+<footer class="footer container">
+    <span>Teste de afinidade acadêmica · UEPA Campus XX</span>
+    <span>
+        Desenvolvido por
+        <a href="https://github.com/JDevSant" target="_blank" rel="noopener noreferrer">
+            <strong>J.Sant</strong>
+        </a>
+    </span>
+</footer>
+
+</main>
+
+<section id="quiz" class="quiz-page"><div class="container quiz-shell">
+ <div class="quiz-header"><div class="quiz-title">Teste de Afinidade</div><button class="quit" onclick="goHome()">← Sair do teste</button></div>
+ <div class="progress-wrap"><div class="progress"><i id="progress"></i></div><div class="progress-count" id="counter">01 / 15</div></div>
+ <div class="question-box"><div class="q-top"><span class="q-cat" id="qcat"></span><span class="q-time">Escolha uma opção</span></div><h2 id="question"></h2><p class="q-note" id="qnote"></p><div class="answers" id="answers"></div><div class="quiz-actions"><button class="prev" id="prev" onclick="prevQuestion()">← Voltar</button><button class="next" id="next" onclick="nextQuestion()" disabled>Continuar →</button></div></div>
+ </div></section>
+
+<section id="result" class="result-page"><div class="container result-shell">
+ <div class="result-top"><div class="kicker">Seu resultado</div><h1 id="resultTitle"></h1><p id="resultText"></p></div>
+ <div class="matches" id="matches"></div>
+ <div class="result-detail"><div class="detail"><h3>Por que esse caminho?</h3><p id="whyText"></p></div><div class="detail"><h3>O que fazer agora?</h3><p>Use o resultado como ponto de partida. Abra o curso, leia o PPC, veja as disciplinas e compare com as outras trajetórias que apareceram para você.</p></div></div>
+ <div class="result-actions"><button class="restart" onclick="startQuiz()">Refazer teste</button><button class="back-home" onclick="goHome()">Voltar para o início</button></div>
+ </div></section>
+
+<div class="modal" id="courseModal" onclick="if(event.target===this)closeModal()"><div class="modal-card"><div class="modal-head"><h2 id="modalTitle"></h2><button class="close" onclick="closeModal()">×</button></div><p id="modalDesc"></p><div class="ppc"><span>Projeto Pedagógico do Curso (PPC)</span><a id="modalPpc" href="#" target="_blank" rel="noopener">Conhecer o PPC ↗</a></div></div></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
