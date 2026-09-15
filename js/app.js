@@ -6,7 +6,6 @@ let scores = [];
 
 const $ = id => document.getElementById(id);
 
-
 /* =========================
    CURSOS
 ========================= */
@@ -43,7 +42,6 @@ function renderCourses() {
     }).join('');
 }
 
-
 /* =========================
    MODAL DOS CURSOS
 ========================= */
@@ -70,20 +68,14 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
-
 /* =========================
    NAVEGAÇÃO
 ========================= */
 
 function show(section) {
-    $('home').style.display =
-        section === 'home' ? 'block' : 'none';
-
-    $('quiz').style.display =
-        section === 'quiz' ? 'block' : 'none';
-
-    $('result').style.display =
-        section === 'result' ? 'block' : 'none';
+    $('home').style.display = section === 'home' ? 'block' : 'none';
+    $('quiz').style.display = section === 'quiz' ? 'block' : 'none';
+    $('result').style.display = section === 'result' ? 'block' : 'none';
 }
 
 function goHome() {
@@ -99,7 +91,6 @@ function goHome() {
     });
 }
 
-
 /* =========================
    INICIAR TESTE
 ========================= */
@@ -110,6 +101,8 @@ function startQuiz() {
     current = 0;
     selected = null;
 
+    // Mantém os 7 índices originais dos cursos.
+    // Não alterar a ordem do array courses em data.js.
     scores = Array(7).fill(0);
 
     show('quiz');
@@ -117,11 +110,15 @@ function startQuiz() {
     history.replaceState(null, '', '#quiz');
 
     renderQuestion();
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'auto'
+    });
 }
 
-
 /* =========================
-   RENDERIZAR PERGUNTA
+   QUESTÕES
 ========================= */
 
 function renderQuestion() {
@@ -168,9 +165,7 @@ function renderQuestion() {
             </span>
         `;
 
-        b.onclick = () => {
-            selectAnswer(i, b);
-        };
+        b.onclick = () => selectAnswer(i, b);
 
         box.appendChild(b);
     });
@@ -185,17 +180,10 @@ function renderQuestion() {
             : 'Continuar →';
 }
 
-
-/* =========================
-   SELECIONAR RESPOSTA
-========================= */
-
 function selectAnswer(i, b) {
     document
         .querySelectorAll('.answer')
-        .forEach(x => {
-            x.classList.remove('selected');
-        });
+        .forEach(x => x.classList.remove('selected'));
 
     b.classList.add('selected');
 
@@ -203,7 +191,6 @@ function selectAnswer(i, b) {
 
     $('next').disabled = false;
 }
-
 
 /* =========================
    PONTUAÇÃO
@@ -215,9 +202,8 @@ function addScore(weights) {
     });
 }
 
-
 /* =========================
-   PRÓXIMA PERGUNTA
+   AVANÇAR QUESTÃO
 ========================= */
 
 function nextQuestion() {
@@ -230,26 +216,21 @@ function nextQuestion() {
     );
 
     if (current < questions.length - 1) {
-
         current++;
 
-        /*
-         * NÃO alterar a posição da página aqui.
-         *
-         * A pergunta é atualizada no mesmo espaço
-         * e o usuário permanece onde estava.
-         */
         renderQuestion();
 
+        window.scrollTo({
+            top: 0,
+            behavior: 'auto'
+        });
     } else {
-
         showResult();
     }
 }
 
-
 /* =========================
-   PERGUNTA ANTERIOR
+   VOLTAR QUESTÃO
 ========================= */
 
 function prevQuestion() {
@@ -257,19 +238,15 @@ function prevQuestion() {
         return;
     }
 
-    current++;
-
-    /*
-     * Corrigido abaixo.
-     * Volta somente o conteúdo da pergunta,
-     * sem mandar a página para o topo.
-     */
-
     current--;
 
     renderQuestion();
-}
 
+    window.scrollTo({
+        top: 0,
+        behavior: 'auto'
+    });
+}
 
 /* =========================
    RESULTADO
@@ -289,6 +266,11 @@ function showResult() {
 
     const maxScore = Math.max(...scores);
 
+    const topPercentage =
+        maxScore > 0
+            ? Math.round(top.score / maxScore * 100)
+            : 0;
+
     $('resultTitle').textContent =
         courses[top.i].name;
 
@@ -302,12 +284,9 @@ function showResult() {
         ranked
             .slice(0, 3)
             .map((r, n) => {
-
                 const percentage =
                     maxScore > 0
-                        ? Math.round(
-                            r.score / maxScore * 100
-                        )
+                        ? Math.round(r.score / maxScore * 100)
                         : 0;
 
                 return `
@@ -355,12 +334,11 @@ function showResult() {
         '#resultado'
     );
 
-    /*
-     * Aqui também não forçamos o usuário
-     * para o topo automaticamente.
-     */
+    window.scrollTo({
+        top: 0,
+        behavior: 'auto'
+    });
 }
-
 
 /* =========================
    TECLADO
@@ -399,7 +377,6 @@ document.addEventListener('keydown', e => {
         goHome();
     }
 });
-
 
 /* =========================
    INICIALIZAÇÃO
