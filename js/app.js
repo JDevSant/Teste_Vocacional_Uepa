@@ -8,19 +8,19 @@ function renderCourses() {
         })
     );
 
-    $('courseGrid').innerHTML = sortedCourses.map((course, index) => `
-        <article class="course" onclick="openCourse(${courses.indexOf(course)})">
-            <small>CAMINHO ${String(index + 1).padStart(2, '0')}</small>
+    $('courseGrid').innerHTML = sortedCourses.map((course, index) => {
+        const originalIndex = courses.indexOf(course);
 
-            <h3>${course.name}</h3>
-
-            <p>${course.desc}</p>
-
-            <span class="course-link">
-                Conhecer o curso →
-            </span>
-        </article>
-    `).join('');
+        return `
+            <article class="course" onclick="openCourse(${originalIndex})">
+                <small>CAMINHO ${String(index + 1).padStart(2, '0')}</small>
+                <h3>${course.name}</h3>
+                <p>${course.desc}</p>
+                <span class="course-link">Conhecer o curso →</span>
+            </article>
+        `;
+    }).join('');
+}
 }function openCourse(i){const c=courses[i];$('modalTitle').textContent=c.name;$('modalDesc').textContent=c.desc;$('modalPpc').href=c.ppc;$('courseModal').classList.add('open');document.body.style.overflow='hidden'}
 function closeModal(){$('courseModal').classList.remove('open');document.body.style.overflow=''}
 function show(section){$('home').style.display=section==='home'?'block':'none';$('quiz').style.display=section==='quiz'?'block':'none';$('result').style.display=section==='result'?'block':'none'}
