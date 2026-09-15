@@ -1233,3 +1233,30 @@ header{
         padding-top:4px
     }
 }
+
+/* =========================
+   AJUSTES DE TOQUE MOBILE
+========================= */
+button,
+.course,
+.answer,
+a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+@media (max-width:520px){
+    button,
+    .course,
+    .answer,
+    a {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .nav-start {
+        min-height: 48px;
+    }
+}
