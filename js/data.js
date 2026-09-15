@@ -1,47 +1,18 @@
 // Dados dos cursos e perguntas do teste vocacional.
-const courses = [
-    {
-        name: 'Engenharia Ambiental e Sanitária',
-        desc: 'Água, resíduos, saneamento, prevenção de impactos, sistemas ambientais e saúde pública.',
-        why: 'Você tende a pensar em impactos, recursos, prevenção e soluções técnicas para problemas ambientais e sanitários.',
-        ppc: 'https://prograd.uepa.br/wp-content/uploads/2023/05/PPC-ENGENHARIA-AMBIENTAL-E-SANITARIA-Vol-1.pdf'
-    },
-    {
-        name: 'Engenharia de Produção',
-        desc: 'Processos, operações, qualidade, logística, custos, dados e melhoria de sistemas produtivos.',
-        why: 'Você demonstra afinidade com organização, eficiência, análise de processos e decisões que equilibram recursos e resultados.',
-        ppc: 'https://ccnt.uepa.br/wp-content/uploads/2026/01/PPC-ENGENHARIA-DE-PRODUCAO.pdf'
-    },
-    {
-        name: 'Engenharia de Software',
-        desc: 'Desenvolvimento de software, sistemas, requisitos, arquitetura, qualidade e soluções digitais.',
-        why: 'Você tende a decompor problemas, organizar regras e pensar em soluções que precisam funcionar de forma consistente.',
-        ppc: 'https://ccnt.uepa.br/wp-content/uploads/2026/01/PPC-ENGENHARIA-DE-SOFTWARE.pdf'
-    },
-    {
-        name: 'Engenharia Florestal',
-        desc: 'Manejo, conservação, recursos florestais, ecossistemas, tecnologia da madeira e produção sustentável.',
-        why: 'Você mostra afinidade com recursos naturais, sistemas florestais, conservação e uso planejado do território.',
-        ppc: 'https://ccnt.uepa.br/wp-content/uploads/2026/01/PPC-Engenharia-Florestal.pdf'
-    },
-    {
-        name: 'Licenciatura em Física',
-        desc: 'Modelagem, matemática, experimentação, fenômenos físicos e formação para o ensino de Física.',
-        why: 'Você mostra interesse por entender relações entre variáveis, testar hipóteses e explicar fenômenos de maneira estruturada.',
-        ppc: 'https://paginas.uepa.br/fisica/wp-content/uploads/2022/05/Projeto-Pedagogico-Curso-Licenciatura-Fisica.pdf'
-    },
-    {
-        name: 'Licenciatura em Geografia',
-        desc: 'Espaço geográfico, território, sociedade, natureza, cartografia, análise espacial e ensino.',
-        why: 'Você tende a observar relações entre pessoas, lugares, território e transformações do espaço.',
-        ppc: 'https://prograd.uepa.br/cursos-do-ccse/'
-    },
-    {
-        name: 'Tecnologia em Alimentos',
-        desc: 'Matérias-primas, processos, qualidade, segurança, desenvolvimento e inovação em alimentos.',
-        why: 'Você demonstra curiosidade por transformações de materiais, controle de qualidade e aplicação prática da ciência.',
-        ppc: 'https://www.uepa.br/pt-br/content/centro-de-ciencias-naturais-e-tecnologia-ccnt'
-    }
+const courses=[
+ {name:'Engenharia Ambiental e Sanitária',desc:'Água, resíduos, saneamento, prevenção de impactos, sistemas ambientais e saúde pública.',why:'Você tende a pensar em impactos, recursos, prevenção e soluções técnicas para problemas ambientais e sanitários.',ppc:'https://prograd.uepa.br/wp-content/uploads/2023/05/PPC-ENGENHARIA-AMBIENTAL-E-SANITARIA-Vol-1.pdf'},
+
+ {name:'Engenharia de Produção',desc:'Processos, operações, qualidade, logística, custos, dados e melhoria de sistemas produtivos.',why:'Você demonstra afinidade com organização, eficiência, análise de processos e decisões que equilibram recursos e resultados.',ppc:'https://ccnt.uepa.br/wp-content/uploads/2026/01/PPC-ENGENHARIA-DE-PRODUCAO.pdf'},
+
+ {name:'Engenharia de Software',desc:'Desenvolvimento de software, sistemas, requisitos, arquitetura, qualidade e soluções digitais.',why:'Você tende a decompor problemas, organizar regras e pensar em soluções que precisam funcionar de forma consistente.',ppc:'https://ccnt.uepa.br/wp-content/uploads/2026/01/PPC-ENGENHARIA-DE-SOFTWARE.pdf'},
+
+ {name:'Engenharia Florestal',desc:'Manejo, conservação, recursos florestais, ecossistemas, tecnologia da madeira e produção sustentável.',why:'Você mostra afinidade com recursos naturais, sistemas florestais, conservação e uso planejado do território.',ppc:'https://ccnt.uepa.br/wp-content/uploads/2026/01/PPC-Engenharia-Florestal.pdf'},
+
+ {name:'Licenciatura em Física',desc:'Modelagem, matemática, experimentação, fenômenos físicos e formação para o ensino de Física.',why:'Você mostra interesse por entender relações entre variáveis, testar hipóteses e explicar fenômenos de maneira estruturada.',ppc:'https://paginas.uepa.br/fisica/wp-content/uploads/2022/05/Projeto-Pedagogico-Curso-Licenciatura-Fisica.pdf'},
+
+ {name:'Licenciatura em Geografia',desc:'Espaço geográfico, território, sociedade, natureza, cartografia, análise espacial e ensino.',why:'Você tende a observar relações entre pessoas, lugares, território e transformações do espaço.',ppc:'https://prograd.uepa.br/cursos-do-ccse/'},
+
+ {name:'Tecnologia em Alimentos',desc:'Matérias-primas, processos, qualidade, segurança, desenvolvimento e inovação em alimentos.',why:'Você demonstra curiosidade por transformações de materiais, controle de qualidade e aplicação prática da ciência.',ppc:'https://www.uepa.br/pt-br/content/centro-de-ciencias-naturais-e-tecnologia-ccnt'}
 ];
 
 // Cada alternativa distribui pontos por mais de um caminho para evitar respostas óbvias.
