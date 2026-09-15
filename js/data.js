@@ -1,7 +1,7 @@
 // Dados dos cursos e perguntas do teste vocacional.
 const courses=[
- {name:'Engenharia de Software',desc:'Desenvolvimento de software, sistemas, requisitos, arquitetura, qualidade e soluções digitais.',why:'Você tende a decompor problemas, organizar regras e pensar em soluções que precisam funcionar de forma consistente.',ppc:'https://ccnt.uepa.br/wp-content/uploads/2026/01/PPC-ENGENHARIA-DE-SOFTWARE.pdf'},
-
+ {name:'Engenharia de Software', desc:'Desenvolvimento de software, sistemas, requisitos, arquitetura, qualidade e soluções digitais.', why:'Você tende a decompor problemas, organizar regras e pensar em soluções que precisam funcionar de forma consistente.', ppc:'https://jdevsant.github.io/FeiraVocacional/'},
+ 
  {name:'Engenharia de Produção',desc:'Processos, operações, qualidade, logística, custos, dados e melhoria de sistemas produtivos.',why:'Você demonstra afinidade com organização, eficiência, análise de processos e decisões que equilibram recursos e resultados.',ppc:'https://ccnt.uepa.br/wp-content/uploads/2026/01/PPC-ENGENHARIA-DE-PRODUCAO.pdf'},
 
  {name:'Licenciatura em Física',desc:'Modelagem, matemática, experimentação, fenômenos físicos e formação para o ensino de Física.',why:'Você mostra interesse por entender relações entre variáveis, testar hipóteses e explicar fenômenos de maneira estruturada.',ppc:'https://paginas.uepa.br/fisica/wp-content/uploads/2022/05/Projeto-Pedagogico-Curso-Licenciatura-Fisica.pdf'},
