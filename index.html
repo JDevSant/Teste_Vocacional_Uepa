@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Teste Vocacional | UEPA</title>
 <meta name="description" content="Teste de Afinidade Acadêmica para os cursos do Campus XX da UEPA em Castanhal.">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
  <div class="container nav">
   <a class="brand" href="#" onclick="goHome();return false;" aria-label="UEPA - Universidade do Estado do Pará">
-   <span class="brand-logo"><img src="uepa-header-logo.png" alt="Identidade visual da UEPA"></span>
+   <span class="brand-logo"><img src="assets/uepa-header-logo.png" alt="Identidade visual da UEPA"></span>
    <span class="brand-copy"><strong>Teste de Afinidade Acadêmica</strong><span>Campus XX · Castanhal</span></span>
   </a>
   <nav class="navlinks" aria-label="Navegação principal">
@@ -33,7 +33,7 @@
    <div class="intro-side">
     <div class="logo-art" aria-label="Logo da Universidade do Estado do Pará">
      <span class="logo-art-shadow"></span>
-     <img src="uepa-home-logo.png" alt="Universidade do Estado do Pará">
+     <img src="assets/uepa-home-logo.png" alt="Universidade do Estado do Pará">
      <span class="logo-art-mark">UEPA</span>
     </div>
     <div class="intro-note"><strong>Responda pelo seu jeito.</strong><br>Não tente adivinhar o curso. A proposta é descobrir quais formas de resolver problemas aparecem com mais força nas suas escolhas.</div>
@@ -85,7 +85,7 @@
 
 <div class="modal" id="courseModal" onclick="if(event.target===this)closeModal()"><div class="modal-card"><div class="modal-head"><h2 id="modalTitle"></h2><button class="close" onclick="closeModal()">×</button></div><p id="modalDesc"></p><div class="ppc"><span>Projeto Pedagógico do Curso (PPC)</span><a id="modalPpc" href="#" target="_blank" rel="noopener">Conhecer o PPC ↗</a></div></div></div>
 
-<script src="data.js"></script>
-<script src="app.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
