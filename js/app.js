@@ -219,11 +219,6 @@ function nextQuestion() {
         current++;
 
         renderQuestion();
-
-        window.scrollTo({
-            top: 0,
-            behavior: 'auto'
-        });
     } else {
         showResult();
     }
@@ -241,11 +236,6 @@ function prevQuestion() {
     current--;
 
     renderQuestion();
-
-    window.scrollTo({
-        top: 0,
-        behavior: 'auto'
-    });
 }
 
 /* =========================
