@@ -971,7 +971,22 @@ header{
     }
 
     .navlinks{
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        gap:0;
+        margin-left:auto
+    }
+
+    .navlinks a{
         display:none
+    }
+
+    .nav-start{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        white-space:nowrap
     }
 
     .brand{
@@ -1028,7 +1043,8 @@ header{
     }
 
     .nav{
-        width:calc(100% - 24px)
+        width:calc(100% - 24px);
+        gap:10px
     }
 
     .brand{
@@ -1043,6 +1059,12 @@ header{
     .brand img{
         width:68px;
         height:56px
+    }
+
+    .nav-start{
+        padding:9px 11px;
+        font-size:11px;
+        border-radius:8px
     }
 
     .home-section{
