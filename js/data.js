@@ -1,6 +1,6 @@
 // Dados dos cursos e perguntas do teste vocacional.
 const courses=[
- {name:'Engenharia de Software',desc:'Desenvolvimento de software, sistemas, requisitos, arquitetura, qualidade e soluções digitais.',why:'Você tende a decompor problemas, organizar regras e pensar em soluções que precisam funcionar de forma consistente.',ppc:'https://ccnt.uepa.br/wp-content/uploads/2026/01/PPC-ENGENHARIA-DE-SOFTWARE.pdf'},
+ {name:'Engenharia de Software',desc:'Desenvolvimento de software, sistemas, requisitos, arquitetura, qualidade e soluções digitais.',why:'Você tende a decompor problemas, organizar regras e pensar em soluções que precisam funcionar de forma consistente.',ppc:'https://jdevsant.github.io/FeiraVocacional/'},
 
  {name:'Engenharia de Produção',desc:'Processos, operações, qualidade, logística, custos, dados e melhoria de sistemas produtivos.',why:'Você demonstra afinidade com organização, eficiência, análise de processos e decisões que equilibram recursos e resultados.',ppc:'https://ccnt.uepa.br/wp-content/uploads/2026/01/PPC-ENGENHARIA-DE-PRODUCAO.pdf'},
 
