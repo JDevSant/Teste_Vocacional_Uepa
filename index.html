@@ -16,7 +16,7 @@
   </a>
   <nav class="navlinks" aria-label="Navegação principal">
    <a href="#como-funciona">Como funciona</a><a href="#cursos">Cursos</a><a href="#sobre-teste">Sobre o teste</a>
-   <button type="button" class="nav-start" onclick="startQuiz()">Começar teste</button>
+   <button type="button" id="startNav" class="nav-start">Começar teste</button>
   </nav>
  </div>
 </header>
@@ -28,7 +28,7 @@
     <div class="eyebrow">Teste de afinidade · UEPA Campus XX</div>
     <h1>Qual curso <span>combina</span> com a forma como você pensa?</h1>
     <p class="lead">Não é uma prova e não existe resposta certa. Você vai escolher como agiria em situações reais de estudo, tecnologia, ciência, processos, território e sociedade. No final, seu conjunto de escolhas vira um perfil de afinidade.</p>
-    <div class="home-actions"><button type="button" class="btn-primary" onclick="startQuiz()">COMEÇAR O TESTE →</button><a class="btn-secondary" href="#como-funciona">Entender primeiro</a></div>
+    <div class="home-actions"><button type="button" id="startHero" class="btn-primary">COMEÇAR O TESTE →</button><a class="btn-secondary" href="#como-funciona">Entender primeiro</a></div>
    </div>
    <div class="intro-side">
     <div class="logo-art" aria-label="Logo da Universidade do Estado do Pará">
@@ -55,7 +55,7 @@
  <section id="cursos" class="section container">
   <div class="section-title"><div><div class="kicker">7 possibilidades</div><h2>Conheça os caminhos antes de escolher.</h2></div><p>Você pode abrir qualquer curso agora ou deixar para explorar as opções depois do resultado.</p></div>
   <div id="courseGrid" class="course-grid"></div>
-  <div class="callout"><div><strong>Quer descobrir primeiro?</strong><p>Responda as 15 perguntas e deixe o resultado organizar suas próximas opções.</p></div><button type="button" class="btn-primary" onclick="startQuiz()">COMEÇAR AGORA →</button></div>
+  <div class="callout"><div><strong>Quer descobrir primeiro?</strong><p>Responda as 15 perguntas e deixe o resultado organizar suas próximas opções.</p></div><button type="button" id="startCourses" class="btn-primary">COMEÇAR AGORA →</button></div>
  </section>
 
 <footer class="footer container">
@@ -71,21 +71,21 @@
 </main>
 
 <section id="quiz" class="quiz-page"><div class="container quiz-shell">
- <div class="quiz-header"><div class="quiz-title">Teste de Afinidade</div><button class="quit" onclick="goHome()">← Sair do teste</button></div>
+ <div class="quiz-header"><div class="quiz-title">Teste de Afinidade</div><button type="button" class="quit" onclick="goHome()">← Sair do teste</button></div>
  <div class="progress-wrap"><div class="progress"><i id="progress"></i></div><div class="progress-count" id="counter">01 / 15</div></div>
- <div class="question-box"><div class="q-top"><span class="q-cat" id="qcat"></span><span class="q-time">Escolha uma opção</span></div><h2 id="question"></h2><p class="q-note" id="qnote"></p><div class="answers" id="answers"></div><div class="quiz-actions"><button class="prev" id="prev" onclick="prevQuestion()">← Voltar</button><button class="next" id="next" onclick="nextQuestion()" disabled>Continuar →</button></div></div>
+ <div class="question-box"><div class="q-top"><span class="q-cat" id="qcat"></span><span class="q-time">Escolha uma opção</span></div><h2 id="question"></h2><p class="q-note" id="qnote"></p><div class="answers" id="answers"></div><div class="quiz-actions"><button type="button" class="prev" id="prev" onclick="prevQuestion()">← Voltar</button><button type="button" class="next" id="next" onclick="nextQuestion()" disabled>Continuar →</button></div></div>
  </div></section>
 
 <section id="result" class="result-page"><div class="container result-shell">
  <div class="result-top"><div class="kicker">Seu resultado</div><h1 id="resultTitle"></h1><p id="resultText"></p></div>
  <div class="matches" id="matches"></div>
  <div class="result-detail"><div class="detail"><h3>Por que esse caminho?</h3><p id="whyText"></p></div><div class="detail"><h3>O que fazer agora?</h3><p>Use o resultado como ponto de partida. Abra o curso, leia o PPC, veja as disciplinas e compare com as outras trajetórias que apareceram para você.</p></div></div>
- <div class="result-actions"><button class="restart" onclick="startQuiz()">Refazer teste</button><button class="back-home" onclick="goHome()">Voltar para o início</button></div>
+ <div class="result-actions"><button type="button" id="restartQuiz" class="restart">Refazer teste</button><button type="button" class="back-home" onclick="goHome()">Voltar para o início</button></div>
  </div></section>
 
-<div class="modal" id="courseModal" onclick="if(event.target===this)closeModal()"><div class="modal-card"><div class="modal-head"><h2 id="modalTitle"></h2><button class="close" onclick="closeModal()">×</button></div><p id="modalDesc"></p><div class="ppc"><span>Projeto Pedagógico do Curso (PPC)</span><a id="modalPpc" href="#" target="_blank" rel="noopener">Conhecer o PPC ↗</a></div></div></div>
+<div class="modal" id="courseModal" onclick="if(event.target===this)closeModal()"><div class="modal-card"><div class="modal-head"><h2 id="modalTitle"></h2><button type="button" class="close" onclick="closeModal()">×</button></div><p id="modalDesc"></p><div class="ppc"><span>Projeto Pedagógico do Curso (PPC)</span><a id="modalPpc" href="#" target="_blank" rel="noopener">Conhecer o PPC ↗</a></div></div></div>
 
-<script src="js/data.js"></script>
-<script src="js/app.js"></script>
+<script src="js/data.js" defer></script>
+<script src="js/app.js" defer></script>
 </body>
 </html>
